@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eimani Recorder Privacy Policy: recording permissions, local storage, Google Play services, sharing, backups, deletion and contact details.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <!-- Updated color-scheme to support both light and dark -->
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy Policy · Eimani Recorder · Analom Studio</title>
+  <style>
+    /* Base Variables (Light Mode) */
+    :root { 
+      --ink: #182333; 
+      --muted: #596375; 
+      --accent: #6541ad; 
+      --paper: #f7f7f4; 
+      --line: #dfe2e7; 
+      --soft: #f4f1fa; 
+      --warning: #7b460e; 
+      --surface: #ffffff;
+      --mark-border: #ded4ef;
+      --mark-shadow: #e5dcf4;
+      --review-bg: #fff9ef;
+      --review-border: #e6d3b4;
+      --review-left: #ac7731;
+      --th-bg: #f5f6f8;
+      --contact-border: #dfd5ee;
+    }
+
+    /* Dark Mode Variables */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #a78bfa;
+        --paper: #0f172a;
+        --line: #334155;
+        --soft: #1e293b;
+        --warning: #fcd34d;
+        --surface: #1e293b;
+        --mark-border: #475569;
+        --mark-shadow: #334155;
+        --review-bg: #451a03;
+        --review-border: #78350f;
+        --review-left: #d97706;
+        --th-bg: #0f172a;
+        --contact-border: #475569;
+      }
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:1.5rem; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.75 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--accent); text-underline-offset:.2em; overflow-wrap:anywhere; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--accent); outline-offset:5px; border-radius:3px; }
+    .skip { position:absolute; left:1rem; top:-10rem; z-index:2; padding:.7rem 1rem; background:var(--surface); }
+    .skip:focus { top:1rem; }
+    .wrap { width:min(1140px,calc(100% - 48px)); margin-inline:auto; }
+    .topbar { border-bottom:1px solid var(--line); background:var(--surface); }
+    .brand-row { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:22px 0; }
+    .brand { display:flex; align-items:center; gap:13px; text-decoration:none; color:var(--ink); }
+    .mark { width:43px; height:43px; flex:none; display:grid; place-items:center; border:1px solid var(--mark-border); border-radius:14px; background:var(--soft); }
+    .mark::after { content:""; width:17px; height:17px; background:var(--accent); border-radius:50%; box-shadow:0 0 0 5px var(--mark-shadow); }
+    .brand strong { display:block; font-size:1rem; line-height:1.3; letter-spacing:-.02em; }
+    .brand small { display:block; color:var(--muted); font-size:.78rem; line-height:1.5; }
+    .contact-link { font-size:.84rem; font-weight:650; }
+    .hero { padding:56px 0 30px; max-width:850px; }
+    .eyebrow { margin:0 0 12px; color:var(--accent); font-size:.72rem; font-weight:750; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:0 0 20px; font-family:Georgia,"Times New Roman",serif; font-size:clamp(2.7rem,6vw,4.6rem); line-height:1.08; font-weight:500; letter-spacing:-.045em; }
+    .intro { margin:0; max-width:720px; color:var(--muted); font-size:1.1rem; line-height:1.75; }
+    .meta { display:flex; flex-wrap:wrap; gap:14px 36px; margin:28px 0 0; }
+    .meta div { min-width:145px; }
+    .meta dt { font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+    .meta dd { margin:3px 0 0; font-size:.87rem; font-weight:650; }
+    .review { margin:0 0 32px; padding:15px 19px; border:1px solid var(--review-border); border-left:4px solid var(--review-left); border-radius:8px; background:var(--review-bg); color:var(--warning); font-size:.86rem; line-height:1.7; }
+    .review strong { font-weight:750; }
+    .review a { color:inherit; }
+    .layout { display:grid; grid-template-columns:215px minmax(0,1fr); align-items:start; gap:40px; padding-bottom:50px; }
+    .contents { position:sticky; top:24px; padding-top:5px; font-size:.8rem; }
+    .contents summary { cursor:pointer; font-weight:750; color:var(--ink); padding:9px 0; }
+    .contents ol { margin:10px 0 0; padding:0; list-style:none; counter-reset:contents; }
+    .contents li { counter-increment:contents; }
+    .contents a { display:flex; align-items:baseline; gap:9px; padding:7px 0; color:var(--muted); text-decoration:none; line-height:1.55; }
+    .contents a::before { content:counter(contents,decimal-leading-zero); flex:0 0 2ch; white-space:nowrap; color:var(--accent); font-size:.66rem; font-variant-numeric:tabular-nums; }
+    .contents a:hover { color:var(--accent); text-decoration:underline; }
+    article { min-width:0; padding:8px 42px 26px; border:1px solid var(--line); border-radius:18px; background:var(--surface); }
+    section { padding:29px 0; scroll-margin-top:24px; }
+    section + section { border-top:1px solid var(--line); }
+    h2 { margin:0 0 17px; font-size:1.27rem; line-height:1.4; font-weight:700; letter-spacing:-.025em; }
+    h2 span { display:block; margin-bottom:8px; font-size:.67rem; letter-spacing:.12em; font-weight:700; color:var(--accent); }
+    h3 { margin:22px 0 9px; font-size:.98rem; line-height:1.5; }
+    p { margin:0 0 15px; }
+    p:last-child { margin-bottom:0; }
+    ul, ol { padding-left:1.3rem; margin:12px 0 17px; }
+    li { margin:7px 0; }
+    strong { font-weight:680; }
+    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.83em; overflow-wrap:anywhere; }
+    .note { margin:20px 0; padding:17px 19px; background:var(--soft); border-radius:8px; font-size:.9rem; }
+    table { width:100%; margin:19px 0; border-collapse:collapse; table-layout:fixed; font-size:.86rem; line-height:1.65; }
+    th, td { padding:13px 12px; vertical-align:top; text-align:left; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+    th { background:var(--th-bg); font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+    th:first-child { width:33%; }
+    td:first-child { font-weight:650; }
+    .technical { border:1px solid var(--line); padding:12px 15px; border-radius:8px; font-size:.84rem; }
+    .technical summary { cursor:pointer; font-weight:650; }
+    .technical ul { margin-bottom:0; }
+    .contact-box { padding:22px; margin:20px 0; border:1px solid var(--contact-border); background:var(--soft); border-radius:10px; }
+    .contact-box strong, .contact-box a { display:block; }
+    .contact-box a { margin-top:6px; font-size:1.02rem; }
+    .fine { color:var(--muted); font-size:.84rem; }
+    footer { border-top:1px solid var(--line); padding:24px 0 32px; color:var(--muted); font-size:.79rem; }
+    .footer-row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; }
+    .footer-links { display:flex; gap:22px; flex-wrap:wrap; }
+    @media (max-width:850px) {
+      .layout { grid-template-columns:1fr; gap:22px; }
+      .contents { position:static; padding:12px 18px; background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+      .contents ol { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:20px; }
+      .contents li { margin:0; }
+      .contents a { min-height:40px; }
+      article { padding-inline:30px; }
+      .hero { padding-top:40px; }
+    }
+    @media (max-width:480px) {
+      .wrap { width:calc(100% - 32px); }
+      .brand-row { padding:18px 0; }
+      .contact-link { font-size:.77rem; }
+      .brand strong { font-size:.9rem; }
+      .hero { padding-top:32px; }
+      .intro { font-size:1rem; }
+      .meta { gap:16px 23px; }
+      .meta div { min-width:125px; }
+      article { padding:0 20px 12px; border-radius:12px; }
+      section { padding:25px 0; }
+      h2 { font-size:1.18rem; }
+      th, td { padding:11px 8px; }
+      table { font-size:.8rem; }
+      .contents { font-size:.75rem; }
+      .contents ol { column-gap:10px; }
+      .review { padding:13px 15px; }
+      .contact-box { padding:17px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print {
+      body { background:#fff; font-size:10.5pt; color:#000; }
+      .wrap { width:100%; }
+      .topbar, .contents, .footer-links, .skip { display:none; }
+      .hero { padding:0 0 20px; }
+      h1 { font-size:30pt; }
+      .layout { display:block; }
+      article { border:0; padding:0; }
+      section { padding:18px 0; }
+      h2, h3 { break-after:avoid; }
+      tr, .review, .contact-box { break-inside:avoid; }
+      a { color:#000; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#content">Skip to privacy policy</a>
+  <header class="topbar">
+    <div class="wrap brand-row">
+      <a class="brand" href="#top" aria-label="Eimani Recorder, top of page">
+        <span class="mark" aria-hidden="true"></span>
+        <span><strong>Eimani Recorder</strong><small>By Analom Studio</small></span>
+      </a>
+      <a class="contact-link" href="mailto:analomstudio@gmail.com">Privacy contact</a>
+    </div>
+  </header>
+
+  <main class="wrap" id="content" tabindex="-1">
+    <div class="hero">
+      <p class="eyebrow">Analom Studio · Privacy &amp; transparency</p>
+      <h1>Privacy Policy</h1>
+      <p class="intro">How Eimani Recorder handles screen recordings, audio, local information, Google Play services and the choices you make.</p>
+      <dl class="meta">
+        <div><dt>Effective date</dt><dd data-policy-status="unpublished">Not yet effective · Review copy</dd></div>
+        <div><dt>Source review date</dt><dd><time datetime="2026-10-20">20 October 2026</time></dd></div>
+        <div><dt>Developer</dt><dd>Analom Studio</dd></div>
+        <div><dt>Reviewed app version</dt><dd>2.1 · Version code 3</dd></div>
+      </dl>
+    </div>
+
+    <aside class="review" aria-label="Publication review status">
+      <strong>Unpublished review copy — publication checks remain.</strong> This document has no asserted effective date. Billing metadata paths have been inspected, but the complete SDK event inventory, provider-side retention and support-email handling still require confirmation. It is not represented as publication-ready. <a href="#review">Read the verification limits.</a>
+    </aside>
+
+    <div class="layout">
+      <nav class="contents" aria-label="Privacy policy contents">
+        <details open>
+          <summary>On this page</summary>
+          <ol>
+            <li><a href="#scope">About this policy</a></li>
+            <li><a href="#recording">Screen &amp; audio recording</a></li>
+            <li><a href="#local-data">Local information</a></li>
+            <li><a href="#permissions">Permissions &amp; access</a></li>
+            <li><a href="#services">Internet &amp; Google Play</a></li>
+            <li><a href="#sharing">Sharing recordings</a></li>
+            <li><a href="#backup">Backups &amp; transfers</a></li>
+            <li><a href="#deletion">Retention &amp; deletion</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#support">Support &amp; requests</a></li>
+            <li><a href="#children">Children's privacy</a></li>
+            <li><a href="#website">This website</a></li>
+            <li><a href="#contact">Updates &amp; contact</a></li>
+            <li><a href="#review">Verification limits</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <article aria-label="Eimani Recorder privacy policy">
+        <section id="scope">
+          <h2><span>01 / Overview</span>About this policy</h2>
+          <p>This Privacy Policy covers <strong>Eimani Recorder</strong>, an Android screen-recording app developed by <strong>Analom Studio</strong>, with application ID <code>com.analom.eimanirecorder</code>.</p>
+          <p>The app processes recordings and related information on your device. Its recording features do not implement a recording-upload service or a developer-operated cloud library. Google Play services, Android backups, services you choose for sharing, and messages you independently send to support have separate data flows described below.</p>
+          <p>Eimani Recorder does not provide its own account-registration or sign-in system. Any Google Play account used for Google Play services is managed by Google.</p>
+        </section>
+
+        <section id="recording">
+          <h2><span>02 / Capture</span>Screen and audio recording</h2>
+          <p>When you start a recording and approve Android's screen-capture prompt, the app captures the screen content Android makes available to that session. Depending on the selected audio mode and permissions, it can also capture microphone audio, permitted internal playback audio, both sources, or no audio.</p>
+          <p>Screen content can contain messages, account details, notifications, images and other personal information displayed by other apps. Microphone recordings can include your voice, nearby conversations and background sounds. Choose what to record and obtain any permission needed from other people.</p>
+          <p>Internal audio capture requires Android 10 or later and is subject to Android and the source app's capture restrictions. Recording can continue while you use other apps, with a foreground recording service and available status controls. You can stop it using the app or available recording controls.</p>
+          <p>Recordings are saved as MP4 video in the device's shared <code>Movies/EimaniRecorder</code> location, through Android MediaStore on newer devices or shared filesystem storage on older supported devices. The recording code does not automatically upload this content to Analom Studio.</p>
+        </section>
+
+        <section id="local-data">
+          <h2><span>03 / On your device</span>Local information and diagnostics</h2>
+          <table>
+            <caption class="fine">Information handled by the app's local features</caption>
+            <thead><tr><th scope="col">Information</th><th scope="col">Purpose and handling</th></tr></thead>
+            <tbody>
+              <tr><td>Recording history</td><td>A local database stores titles, file paths or media URIs, timestamps, duration, file size, resolution, frame rate, bitrate, codec and format to display and manage your recordings.</td></tr>
+              <tr><td>Preferences</td><td>App-private preferences store recording options, audio levels, orientation, theme, overlay options, watermark text and related settings.</td></tr>
+              <tr><td>Video previews</td><td>The app reads frames and metadata from saved recordings to display thumbnails and playback. Its thumbnail cache holds images in memory.</td></tr>
+              <tr><td>Device capabilities</td><td>Android version, device model, display characteristics, audio configuration and encoder capabilities are read to choose compatible recording settings.</td></tr>
+              <tr><td>Motion and drawings</td><td>Accelerometer readings support the optional shake-to-stop feature. Overlay drawings are held in memory and may appear in captured content when displayed.</td></tr>
+              <tr><td>Diagnostic logs</td><td>Android system logs can contain encoder and audio details, timing information, errors and file paths. The app does not configure a dedicated analytics or crash-report upload feature for these logs.</td></tr>
+            </tbody>
+          </table>
+          <p>No Firebase Analytics, Firebase Authentication, Firestore, Crashlytics or advertising feature is configured in the reviewed release. Google Play Billing's own diagnostic transport is separate and is described next.</p>
+        </section>
+
+        <section id="permissions">
+          <h2><span>04 / Your controls</span>Permissions and device access</h2>
+          <p>Permissions and system authorizations allow the relevant features to work. You can change app permissions and overlay access in Android Settings; denying or revoking access may prevent the related feature from working.</p>
+          <table>
+            <thead><tr><th scope="col">Access</th><th scope="col">How it relates to the app</th></tr></thead>
+            <tbody>
+              <tr><td>Screen capture</td><td>Android's MediaProjection consent prompt authorizes a capture session. It is a system authorization, not unrestricted access to other apps' private databases.</td></tr>
+              <tr><td>Record audio</td><td><code>RECORD_AUDIO</code> is required for microphone recording and Android playback-audio capture. The app offers a no-audio option.</td></tr>
+              <tr><td>Display over other apps</td><td><code>SYSTEM_ALERT_WINDOW</code> enables floating recording controls, drawing tools and watermark overlays.</td></tr>
+              <tr><td>Notifications</td><td><code>POST_NOTIFICATIONS</code> supports recording-status notifications and controls where permitted by Android.</td></tr>
+              <tr><td>Foreground services</td><td>The general, media-projection and microphone foreground-service permissions support an ongoing recording session.</td></tr>
+              <tr><td>Legacy storage</td><td><code>WRITE_EXTERNAL_STORAGE</code> is limited to Android 9 and below to save recordings in shared storage.</td></tr>
+              <tr><td>Network and billing</td><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code> and Google Play billing permission are present in the merged release configuration, including through libraries.</td></tr>
+            </tbody>
+          </table>
+          <details class="technical">
+            <summary>Other declared permissions</summary>
+            <p><code>VIBRATE</code> and <code>WAKE_LOCK</code> are declared, although no explicit vibration or wake-lock acquisition was found in app-owned code. AndroidX also declares the internal signature-protected <code>com.analom.eimanirecorder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>.</p>
+            <p>The release does not declare location, camera, contacts, SMS or call-log permissions. This does not prevent information of those kinds from appearing within screen content you choose to record.</p>
+          </details>
+        </section>
+
+        <section id="services">
+          <h2><span>05 / External services</span>Internet access, Google Play and purchases</h2>
+          <p>The release app uses <strong>Google Play Billing Library 9.1.0</strong>. It connects to Google Play to query product information and existing purchase status, including on startup and when the app resumes. Network activity is therefore not limited to pressing a purchase button.</p>
+          <p>Purchase handling can process product identifiers, purchase tokens, purchase state, acknowledgement status and derived entitlement information. The app's purchase snapshots and entitlement state are held in memory for purchase and access checks; the SDK's diagnostic storage is described below. The app does not present a form for card numbers or payment credentials.</p>
+          <p><strong>Live checkout is unavailable in the reviewed configuration</strong> because purchase verification is not configured. No developer-operated purchase-verification endpoint is implemented. If that changes, the policy must reflect the new data flow. Debug builds can instead store a simulated plan and expiry locally; simulation does not initiate a Google Play payment.</p>
+          <h3>Billing diagnostics and technical metadata</h3>
+          <p>The included billing SDK configures a Google-operated logging transport for billing events. Inspection of Billing Library 9.1.0 and its version-matched Google data-transport 3.1.8 source and compiled code verified paths that prepare the following technical information for logging, where available:</p>
+          <table>
+            <thead><tr><th scope="col">Information</th><th scope="col">Verified processing path</th></tr></thead>
+            <tbody>
+              <tr><td>Billing and app context</td><td>App package name and version code, billing-library version and a randomly generated billing-client session identifier for that client instance.</td></tr>
+              <tr><td>Device and software build</td><td>Android API version, brand, model, manufacturer, total device memory, hardware/device/product names, OS build identifier and software build fingerprint.</td></tr>
+              <tr><td>Language and regional settings</td><td>Device locale language, locale country and timezone offset.</td></tr>
+              <tr><td>Connection information</td><td>Active network type, mobile-network subtype and SIM operator's mobile country/network code, when available.</td></tr>
+              <tr><td>Event timing</td><td>Event and request timestamps and elapsed time since device boot, used in the transport's event/request records.</td></tr>
+            </tbody>
+          </table>
+          <p>The country field above comes from the device's locale settings, not a GPS reading. The SIM operator code identifies a mobile operator, not a phone number or SIM serial number. A build fingerprint describes a software build, not a fingerprint scan. These findings do not establish whether other identifiers or data appear elsewhere in the complete SDK payload.</p>
+          <p>The logging transport can queue encoded events and metadata in an on-device SQLite database before sending them to a configured Google HTTPS logging endpoint. Local queue storage and cleanup are separate from Google's storage after receipt. The app does not expose a separate billing-diagnostics opt-out in the reviewed source.</p>
+          <p>The billing dependencies include Google data-transport and Firebase encoding utilities. Encoding utilities and a Google logging endpoint do not establish a Firebase Analytics or Crashlytics integration. Transitive Play services location components are present, but no app-owned location API calls or location permissions were found.</p>
+          <div class="note"><strong>Verification limit:</strong> these are verified source/configuration paths, not an observation of every live request. The complete billing-event payload, any additional server-side processing, Google's version-specific retention/deletion arrangements and a user-accessible deletion route for those SDK logs have not been verified. No claim is made that billing diagnostics are anonymous, processed only in memory, or deleted by Google after a fixed period.</div>
+          <p>Google handles its services under the <a href="https://policies.google.com/privacy" rel="noreferrer">Google Privacy Policy</a>. Android and Google Play may also process app-quality information, such as crashes and performance, according to your device and usage-diagnostics settings. See <a href="https://developer.android.com/google/play/vitals" rel="noreferrer">Android vitals</a>.</p>
+        </section>
+
+        <section id="sharing">
+          <h2><span>06 / Your choice</span>Sharing and opening recordings</h2>
+          <p>When you select a share or external-player action, the app uses Android's sharing or viewing interface and grants the selected app access to the chosen recording. This can disclose the video, its audio and accompanying file information to that app or its recipients.</p>
+          <p>A recipient service can upload, retain or further share the content under its own rules. Shared recordings may also be accessible to gallery or media apps under Android's storage controls. Deleting a local recording does not remove copies already received by others.</p>
+        </section>
+
+        <section id="backup">
+          <h2><span>07 / System services</span>Backups and device transfers</h2>
+          <p>Android backup is enabled, and the current backup rules do not expressly exclude app data. Eligible preferences, the local history database, SDK databases and other eligible app-private files may therefore be included in Android cloud backup or device transfer, depending on your device, provider and settings. A backup or restore was not observed during this source review.</p>
+          <p>Videos in shared storage may separately be copied by gallery/cloud-backup apps you enable. Those copies are controlled by the relevant service. Local storage does not guarantee that information stays only on the original device. See <a href="https://developer.android.com/identity/data/autobackup" rel="noreferrer">Android backup information</a>.</p>
+        </section>
+
+        <section id="deletion">
+          <h2><span>08 / Data lifecycle</span>Retention and deletion</h2>
+          <ul>
+            <li><strong>Recordings:</strong> no time-based recording-deletion schedule is configured. Use the app's Gallery delete action, or a device gallery/file manager, to remove recordings. The app attempts to remove the selected file or media item before deleting its local history entry. If deletion fails, the history entry is retained.</li>
+            <li><strong>Settings and history:</strong> these persist in app-private storage. Clearing app storage or uninstalling removes that local app data under Android's behavior. Shared videos can remain and should be checked separately.</li>
+            <li><strong>Backups and recipient copies:</strong> manage deletion through the relevant backup service, receiving app or recipient. Analom Studio has no implemented remote-delete feature for those copies.</li>
+            <li><strong>Google Play records:</strong> Google controls its purchase and service records. Clearing app data or uninstalling does not itself delete Google's records or cancel a subscription.</li>
+            <li><strong>Logs and temporary data:</strong> the billing transport includes local event-queue cleanup and retry logic. When cleanup occurs depends on the SDK's execution and device conditions; this is not a guaranteed deletion deadline. Removing local queue dataচেতন does not remove events already received by Google. Google's server-side SDK-log retention period has not been verified. Android governs its own diagnostic logs.</li>
+          </ul>
+          <p>There is no Eimani Recorder account to delete. Support correspondence is addressed separately below.</p>
+        </section>
+
+        <section id="security">
+          <h2><span>09 / Protection</span>Security and its limits</h2>
+          <p>Settings and history use Android app-private storage. The recording service and file provider are not exported for unrestricted external access. User-initiated sharing grants read access to the selected recording through Android's URI-permission mechanism.</p>
+          <p>The app does not implement an additional encryption or password-protection layer for saved videos or its local history database. Videos are stored in shared media storage. Device access controls, operating-system protections, backups and other apps' granted access affect their security.</p>
+          <p>The examined billing logging transport is configured with a Google HTTPS endpoint. This configuration check does not establish that every possible SDK or system-service data flow has been verified as encrypted in transit.</p>
+          <p>No storage or communication system can be guaranteed completely secure. Avoid recording sensitive screens or conversations unnecessarily, protect access to your device, and review a recipient before sharing.</p>
+        </section>
+
+        <section id="support">
+          <h2><span>10 / Separate correspondence</span>Support emails and privacy requests</h2>
+          <p>If you independently email <a href="mailto:analomstudio@gmail.com">analomstudio@gmail.com</a>, your email address, message and any attachments you choose to send are delivered to the support mailbox. This is separate from data accessed or stored by the Android app; the app does not automatically send support emails or attach recordings.</p>
+          <p><strong>Analom Studio has not yet established a retention/deletion policy for support emails and attachments.</strong> The Android source does not verify how the mailbox is accessed, organized, forwarded, backed up or cleared. No fixed storage period, automatic-deletion deadline or guaranteed deletion outcome is stated here. You can write to the same address with privacy questions or an access, correction or deletion request where applicable; the operational handling of those requests still requires confirmation.</p>
+          <p>Only include information needed to explain your issue. Do not send passwords, payment credentials or sensitive recordings unnecessarily. Email delivery and storage also involve your email provider and the receiving mailbox's provider.</p>
+        </section>
+
+        <section id="children">
+          <h2><span>11 / Intended audience</span>Children's privacy</h2>
+          <p>Eimani Recorder is intended for users aged <strong>13 and older</strong> and is not directed to children under 13. The app does not provide its own registration or date-of-birth collection feature.</p>
+          <p>If you are a parent or guardian with concerns about a child's information in support correspondence, contact Analom Studio. Information within a locally stored recording must be managed on the device and, if shared, with the relevant recipient. Recording other people should respect their privacy and applicable requirements.</p>
+        </section>
+
+        <section id="website">
+          <h2><span>12 / This page</span>Website and hosting privacy</h2>
+          <p>This policy page contains its own HTML and CSS. It does not set cookies, use browser storage, include analytics, load external fonts or images, or submit information through a form. External links and the email link open services with their own data practices.</p>
+          <p>When hosted on <strong>GitHub Pages</strong>, GitHub logs visitors' IP addresses for security purposes. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noreferrer">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub Privacy Statement</a>. Hosting data is separate from screen recordings created in the Android app.</p>
+        </section>
+
+        <section id="contact">
+          <h2><span>13 / Get in touch</span>Updates and contact information</h2>
+          <p>Review this policy when the app's features, SDKs or data practices change. Changes to recording uploads, purchase verification, analytics or backup behavior would require a corresponding policy review and an updated effective date.</p>
+          <div class="contact-box">
+            <strong>Analom Studio · Eimani Recorder</strong>
+            <a href="mailto:analomstudio@gmail.com">analomstudio@gmail.com</a>
+          </div>
+          <p class="fine">Policy repository: <a href="https://github.com/AnalomStrom/eimani-recorder-privacy-policy" rel="noreferrer">AnalomStrom/eimani-recorder-privacy-policy</a></p>
+        </section>
+
+        <section id="review">
+          <h2><span>14 / Transparency</span>Verification limits</h2>
+          <p>This review examined the app source, permissions, backup rules, resolved release dependencies, merged release Manifest and selected billing/transport SDK code. It did not observe live network traffic or verify the final published Android package, Google Play account configuration, service-provider retention practices or mailbox operations.</p>
+          <p><strong>20 October 2026 is the source-review date only.</strong> This copy has no asserted effective date because publication and adoption have not been confirmed. When the policy takes effect, its actual effective date must be set at that time; it must not be backdated merely to match this review. The intended 13+ audience was supplied by the developer and has not been checked against Play Console.</p>
+          <ul>
+            <li>Confirm the complete version-specific SDK event inventory, purposes, retention/deletion arrangements and the behavior of the final release.</li>
+            <li>Establish and accurately describe the actual handling, retention and deletion of support correspondence and attachments.</li>
+            <li>Verify an active public policy URL, policy access inside the app, the store-listing details and the actual policy effective date.</li>
+          </ul>
+          <p>Google Play's <a href="https://support.google.com/googleplay/android-developer/answer/10144311?hl=en" rel="noreferrer">User Data policy</a> requires a public privacy policy and access within the app. The separate <a href="https://support.google.com/googleplay/android-developer/answer/10787469?hl=en" rel="noreferrer">Data safety declaration</a> must also reflect the app and its SDKs. This document does not certify the answers to that form.</p>
+          <p><strong>This is a complete review copy, not a declaration that all publication requirements have been verified.</strong> It makes no blanket claim that the app collects no data or that information can never leave a device.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>Analom Studio · Eimani Recorder · Privacy Policy</span>
+      <div class="footer-links">
+        <a href="mailto:analomstudio@gmail.com">Contact</a>
+        <a href="https://github.com/AnalomStrom/eimani-recorder-privacy-policy" rel="noreferrer">Policy source</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
